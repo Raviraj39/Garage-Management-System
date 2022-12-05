@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{471D2BF4-D11E-493E-A650-5B8A016D5FFA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Garage_Management_System</RootNamespace>
+    <AssemblyName>Garage Management System</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection.cs" />
+    <Compile Include="db_billcard.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_billcard.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="db_finance.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_finance.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_cars.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_cars.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_employee.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_employee.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ds_stock.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_stock.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_home.Designer.cs">
+      <DependentUpon>frm_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_login.Designer.cs">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reportviewer1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportviewer1.Designer.cs">
+      <DependentUpon>reportviewer1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_analytics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_analytics.Designer.cs">
+      <DependentUpon>uc_analytics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_billing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_billing.Designer.cs">
+      <DependentUpon>uc_billing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_cars.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_cars.Designer.cs">
+      <DependentUpon>uc_cars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_employee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_employee.Designer.cs">
+      <DependentUpon>uc_employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_stock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_stock.Designer.cs">
+      <DependentUpon>uc_stock.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="frm_home.resx">
+      <DependentUpon>frm_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_login.resx">
+      <DependentUpon>frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reportviewer1.resx">
+      <DependentUpon>reportviewer1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_analytics.resx">
+      <DependentUpon>uc_analytics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_billing.resx">
+      <DependentUpon>uc_billing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_cars.resx">
+      <DependentUpon>uc_cars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_employee.resx">
+      <DependentUpon>uc_employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_stock.resx">
+      <DependentUpon>uc_stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="db_billcard.xsc">
+      <DependentUpon>db_billcard.xsd</DependentUpon>
+    </None>
+    <None Include="db_billcard.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_billcard.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="db_billcard.xss">
+      <DependentUpon>db_billcard.xsd</DependentUpon>
+    </None>
+    <None Include="db_finance.xsc">
+      <DependentUpon>db_finance.xsd</DependentUpon>
+    </None>
+    <None Include="db_finance.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_finance.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="db_finance.xss">
+      <DependentUpon>db_finance.xsd</DependentUpon>
+    </None>
+    <None Include="ds_cars.xsc">
+      <DependentUpon>ds_cars.xsd</DependentUpon>
+    </None>
+    <None Include="ds_cars.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_cars.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_cars.xss">
+      <DependentUpon>ds_cars.xsd</DependentUpon>
+    </None>
+    <None Include="ds_employee.xsc">
+      <DependentUpon>ds_employee.xsd</DependentUpon>
+    </None>
+    <None Include="ds_employee.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_employee.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_employee.xss">
+      <DependentUpon>ds_employee.xsd</DependentUpon>
+    </None>
+    <None Include="ds_stock.xsc">
+      <DependentUpon>ds_stock.xsd</DependentUpon>
+    </None>
+    <None Include="ds_stock.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_stock.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_stock.xss">
+      <DependentUpon>ds_stock.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_car_120px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_services_120px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_120px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_money_bag_120px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GMS.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GMS_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>GMS.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
